@@ -14,7 +14,7 @@ class _DateTimeViewState extends State<DateTimeView> {
   DateTime dateTime = DateTime.now();
   int fontSizeBase = 0;
 
-  double sizeWithBase(int size) => fontSizeBase + size * 1.0;
+  double sizeWithBase(int size) => fontSizeBase + size * .80;
 
   void updateSizeBase(Size size) {
     final width = size.width;
@@ -56,23 +56,17 @@ class _DateTimeViewState extends State<DateTimeView> {
             TextSpan(
                 text: timeHM,
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: sizeWithBase(100),
-                    fontWeight: FontWeight.bold)),
+                    color: Colors.white, fontSize: sizeWithBase(100), fontWeight: FontWeight.bold)),
             TextSpan(
                 text: ' $timeS',
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: sizeWithBase(50),
-                    fontWeight: FontWeight.bold))
+                    color: Colors.white, fontSize: sizeWithBase(50), fontWeight: FontWeight.bold))
           ]),
           textAlign: TextAlign.center),
       Text(date,
           textAlign: TextAlign.center,
           style: TextStyle(
-              color: Colors.white,
-              fontSize: sizeWithBase(50),
-              fontWeight: FontWeight.bold))
+              color: Colors.white, fontSize: sizeWithBase(50), fontWeight: FontWeight.bold))
     ]);
   }
 }
